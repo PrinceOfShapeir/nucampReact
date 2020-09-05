@@ -18,14 +18,14 @@ class Bootcamp {
         if(this.students.includes(student.email)){
             console.log(`${student.email} already registered`);
         }*/
-        if(this.students.filter(a=>a==student.email).length>0){
+        if(this.students.filter(a=>a.email==student.email).length>0){
             console.log(`${student.email} already registered`);
         }
         else {
             
-            this.students.push(student.email);
+            this.students.push(student);
             console.log(`Registering ${student.email} to the bootcamp Web Dev Fundamentals.`)
-            return this.students;
+            return [...this.students.reduce((students, student)=>students.concat(`${student.name} ${student.email}`), [])];
         }
     }
 
