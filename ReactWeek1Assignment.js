@@ -19,8 +19,8 @@ class Bootcamp {
         }
         else {
             
-            this.students.push(student);
-            console.log(`Registering ${student} to the bootcamp Web Dev Fundamentals.`)
+            this.students.push(student.email);
+            console.log(`Registering ${student.email} to the bootcamp Web Dev Fundamentals.`)
             return this.students;
         }
     }
